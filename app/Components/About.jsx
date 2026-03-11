@@ -9,7 +9,7 @@ const About = () => {
     <div id="about" className="w-full px-[12%] py-10 pb-96 scroll-mt-20 mt-20">
       <motion.h4
         initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 2, y: 0 }}
         transition={{ duration: 0.5 }}
         className="text-center mb-2 text-lg font-Ovo">Introduction</motion.h4>
       <motion.h2
