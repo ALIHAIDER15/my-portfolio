@@ -4,7 +4,8 @@ import Header from "./Components/Header";
 import About from "./Components/About";
 import Services from "./Components/Services";
 import Work from "./Components/Work";
-
+import Contact from "./Components/Contact";
+import Footer from "./Components/Footer";
 
 export default function Home() {
   return (
@@ -13,7 +14,9 @@ export default function Home() {
       <Header />
       <About />
       <Services />
-      <Work /> 
+      <Work />
+      <Contact />
+      <Footer />
     </>
   );
 }

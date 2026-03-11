@@ -1,5 +1,48 @@
 @import "tailwindcss";
 
-*{
-font-family: outfit;
+/* This tells Tailwind: when <html> has class "dark", activate all dark: classes */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Custom colors for our theme - use like bg-darkTheme, bg-darkHover, etc. */
+@theme {
+    --color-darkTheme: #11001F;
+    --color-darkHover: #2a004a;
+    --color-lightHover: #fcf4ff;
+}
+
+* {
+    font-family: outfit;
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e11d48; /* rose-600 */
+    border-radius: 20px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #be123c; /* rose-700 */
+    border: 3px solid transparent;
+    background-clip: content-box;
+}
+
+/* Dark Mode Scrollbar */
+.dark ::-webkit-scrollbar-thumb {
+    background: #fb7185; /* rose-400 */
+    border: 3px solid #11001F; /* darkTheme */
+    background-clip: content-box;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #f43f5e; /* rose-500 */
 }
